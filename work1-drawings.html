@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work Details | Yash Dhotre</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #7b2cbf;
+  --accent: #ff69b4;
+  --text: #1a1a1a;
+  --bg: #f9f9ff;
+  --card-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header h1 { font-size: 20px; font-weight: 600; }
+header a {
+  background: #fff;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+header a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #fff, #f1ebff);
+}
+.hero h2 {
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.hero p {
+  color: #444;
+  max-width: 700px;
+  margin: auto;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Coming Soon Section */
+.coming-soon {
+  text-align: center;
+  margin: 80px 20px;
+}
+.loader {
+  border: 6px solid #e0e0e0;
+  border-top: 6px solid var(--accent);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 20px auto;
+  animation: spin 1.2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.coming-soon h3 {
+  color: var(--primary);
+  font-size: 24px;
+  margin-top: 10px;
+}
+.coming-soon p {
+  color: #555;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+/* Gallery Section */
+.gallery {
+  width: 90%;
+  max-width: 1100px;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.placeholder {
+  background: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px var(--shadow);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-weight: 500;
+  font-size: 15px;
+  transition: 0.3s;
+}
+.placeholder:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  color: var(--primary);
+}
+
+/* Tools Section */
+.tools {
+  text-align: center;
+  margin: 100px 20px 60px;
+}
+.tools h3 {
+  color: var(--primary);
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.tool-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.tool {
+  background: var(--card-bg);
+  box-shadow: 0 3px 10px var(--shadow);
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 600;
+  color: var(--text);
+  transition: 0.3s;
+}
+.tool:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #fff;
+  margin-top: 80px;
+  font-size: 14px;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media(max-width:600px) {
+  .hero h2 { font-size: 28px; }
+  header h1 { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Work Details</h1>
+  <a href="mywork.html">← Back to Portfolio</a>
+</header>
+
+<section class="hero fade-in">
+  <h2>AutoCAD Submission Drawings</h2>
+  <p>This section will showcase my professional AutoCAD and STAAD Pro drawings, design layouts, and project submissions. Content will be updated soon.</p>
+</section>
+
+<section class="coming-soon fade-in">
+  <div class="loader"></div>
+  <h3>Work in Progress</h3>
+  <p>This portfolio section is currently being updated with my latest work. Please check back soon to explore detailed design drawings and reports.</p>
+</section>
+
+<section class="gallery fade-in">
+  <div class="placeholder">Image Placeholder 1</div>
+  <div class="placeholder">Image Placeholder 2</div>
+  <div class="placeholder">Image Placeholder 3</div>
+</section>
+
+<section class="tools fade-in">
+  <h3>Tools Used</h3>
+  <div class="tool-list">
+    <div class="tool">AutoCAD</div>
+    <div class="tool">STAAD Pro</div>
+    <div class="tool">MS Excel</div>
+    <div class="tool">MS Word</div>
+    <div class="tool">Python</div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Yash Dhotre | Civil Engineering Student | Mahad, Maharashtra
+</footer>
+
+<script>
+// reveal animation
+const elements=document.querySelectorAll('.fade-in');
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:0.2});
+elements.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>

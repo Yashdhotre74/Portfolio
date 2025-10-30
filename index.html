@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- Primary Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civion Design | Yash Dhotre Portfolio</title>
+    <meta name="title" content="Civion Design | Yash Dhotre Portfolio">
+    <meta name="description" content="Yash Sunil Dhotre's portfolio showcasing civil engineering expertise in structural design, AutoCAD drafting, and construction services. DBATU Civil Engineering student specializing in innovative solutions.">
+    <meta name="keywords" content="Yash Dhotre, Yash Sunil Dhotre, Civil Engineer, DBATU, AutoCAD drafting, structural design, civil engineering services, Civion Design, civil engineering portfolio, construction services, Mahad civil engineer, DBATU civil engineering, structural analysis, civil engineering student">
+    <meta name="author" content="Yash Sunil Dhotre">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yashdhotreportfolio.civiondesign.site/">
+    <meta property="og:title" content="Civion Design | Yash Dhotre Portfolio">
+    <meta property="og:description" content="Explore Yash Sunil Dhotre's civil engineering portfolio featuring structural design, AutoCAD drafting, and innovative construction solutions. DBATU Civil Engineering student passionate about creating sustainable structures.">
+    <meta property="og:image" content="https://yashdhotreportfolio.civiondesign.site/images/yash-profile.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yashdhotreportfolio.civiondesign.site/">
+    <meta property="twitter:title" content="Civion Design | Yash Dhotre Portfolio">
+    <meta property="twitter:description" content="Discover Yash Sunil Dhotre's civil engineering expertise - from structural design to AutoCAD drafting. DBATU student creating innovative construction solutions.">
+    <meta property="twitter:image" content="https://yashdhotreportfolio.civiondesign.site/images/yash-profile.png">
+
+    <!-- Schema.org markup for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+        "name": "Yash Sunil Dhotre",
+        "givenName": "Yash",
+        "familyName": "Dhotre",
+        "additionalName": "Sunil",
+  "jobTitle": "Civil Engineer",
+  "url": "https://yashdhotreportfolio.civiondesign.site",
+        "image": "https://yashdhotreportfolio.civiondesign.site/images/yash-profile.png",
+        "description": "Civil Engineering student at DBATU specializing in structural design, AutoCAD drafting, and construction services",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mahad",
+            "addressRegion": "Raigad",
+            "addressCountry": "India"
+        },
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Dr. Babasaheb Ambedkar Technological University"
+        },
+  "sameAs": [
+            "https://github.com/Yashdhotre74",
+            "https://linkedin.com/in/yashdhotre"
+        ],
+        "knowsAbout": [
+            "Structural Design",
+            "AutoCAD Drafting",
+            "Civil Engineering",
+            "Construction Management",
+            "STAAD Pro",
+            "Project Estimation"
+  ]
+}
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Dhotre portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://yashdhotreportfolio.civiondesign.site/images/yash-profile.png" type="image/png">
+    <script type="application/ld+json">
+
+</script>
+
+<style>
+    .typewriter {
+        min-height: 32px;
+    }
+    .cursor {
+        display: inline-block;
+        width: 3px;
+        background-color: #777;
+        margin-left: 0.1rem;
+        animation: blink 1s infinite;
+    }
+    @keyframes blink {
+        0% { background-color: #777; }
+        49% { background-color: #777; }
+        50% { background-color: transparent; }
+        99% { background-color: transparent; }
+        100% { background-color: #777; }
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 2rem;
+    }
+
+    body {
+        padding-top: 60px;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    img {
+        transition: transform 0.3s ease-out;
+        transform-origin: center;
+    }
+
+    img:hover {
+        transform: scale(1.05);
+    }
+
+    nav {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 9999;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transform: none !important;
+        transition: background-color 0.3s;
+    }
+
+    .dark nav {
+        background: rgba(17, 0, 31, 0.9);
+    }
+
+    /* Main content container */
+    .content-wrapper {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Add styles for section spacing */
+    .section-spacing {
+        padding: 80px 0; /* Consistent padding for sections */
+        min-height: 100vh; /* Full viewport height */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .section-title {
+        margin-bottom: 3rem;
+    }
+
+    .section-subtitle {
+        color: #666;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    /* Adjust header spacing */
+    .header-container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    /* Add styles for all main sections */
+    .section-container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px 0;
+        position: relative;
+    }
+
+    /* Adjust section title spacing */
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    /* Add background alternation */
+    .section-alternate {
+        background-color: rgba(249, 250, 251, 0.5);
+    }
+
+    .dark .section-alternate {
+        background-color: rgba(17, 0, 31, 0.3);
+    }
+</style>
+
+</head>
+<body class="overflow-x-hidden font-Outfit leading-8 dark:bg-darkTheme dark:text-white">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]
+    dark:hidden">
+        <img src="./images/header-bg-color.png" alt="" class="w-full">
+    </div>
+
+    <!-- Update the modal HTML -->
+    <div id="imageModal" class="fixed inset-0 z-[9999] hidden" onclick="closeImageModal(event)">
+        <div class="absolute inset-0 backdrop-blur-md bg-transparent"></div>
+        <div class="relative w-full h-full flex items-center justify-center p-4">
+            <button onclick="closeImageModal(event)" class="absolute top-4 right-4 text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <img src="images\profile-pic.png" alt="Profile Picture" 
+                class="rounded-full w-80 md:w-96 shadow-2xl transform transition-transform duration-300"
+                onclick="event.stopPropagation()">
+        </div>
+    </div>
+
+    <nav class="w-full px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between bg-white/80 backdrop-blur-sm dark:bg-darkTheme/80">
+
+        <img src="images\logo-white-removebg-preview.png" alt="Logo"
+        class="w-28 cursor-pointer mr-14 dark:hidden hover:scale-110 transition-transform duration-300">
+
+        <img src="images\Logo-Dark-removebg-preview.png" alt="Logo"
+        class="w-28 cursor-pointer mr-14 hidden dark:block hover:scale-110 transition-transform duration-300">
+
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo
+        dark:border dark:border-white/50 dark:bg-transparent">
+            <li><a href="#top" class="hover:text-purple-600 transition-all duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-purple-600 after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full">Home</a></li>
+            <li><a href="#about" class="hover:text-purple-600 transition-all duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-purple-600 after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full">About me</a></li>
+            <li><a href="#services" class="hover:text-purple-600 transition-all duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-purple-600 after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full">Services</a></li>
+            <li><a href="#work" class="hover:text-purple-600 transition-all duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-purple-600 after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full">My Work</a></li>
+            <li><a href="#contact" class="hover:text-purple-600 transition-all duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-purple-600 after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full">Contact me</a></li>
+            <li><a href="college-work.html" class="hover:text-purple-600 transition-all duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-purple-600 after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full">College Section</a></li>
+
+        </ul>
+
+        <div class="flex items-center gap-4">
+        <button onclick="toggleTheme()">
+            <img src="./images/moon_icon.png" alt="" class="w-6 dark:hidden">
+            <img src="./images/sun_icon.png" alt="" class="w-6 hidden dark:block">
+        </button>
+
+        <a href="#contact" 
+        class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50 hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+        Contact 
+        <img src="./images/arrow-icon.png" alt="" class="w-3 dark:hidden transition-transform duration-300 group-hover:translate-x-1">
+        <img src="./images/arrow-icon-dark.png" alt="" class="w-3 hidden dark:block transition-transform duration-300 group-hover:translate-x-1">
+    </a>
+
+        <button class="block md:hidden ml-3" onclick="openMenu()">
+            <img src="./images/menu-black.png" alt="" class="w-6 dark:hidden">
+            <img src="./images/menu-white.png" alt="" class="w-6 hidden dark:block">
+        </button>
+
+        </div>
+<!-- ----- mobile menu ------  -->
+        <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white">
+
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="./images/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden">
+
+                <img src="./images/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block">
+            </div>
+
+            <li><a href="#top" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About me</a></li>
+            <li><a href="#services" onclick="closeMenu()">Services</a></li>
+            <li><a href="#work" onclick="closeMenu()">My Work</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
+            <li><a href="college-work.html" onclick="closeMenu()">College Section</a></li>
+            
+        </ul>
+    
+</nav>
+
+<div class="content-wrapper">
+    <!-- Header section -->
+    <div class="w-11/12 max-w-2xl text-center mx-auto header-container">
+        <img src="images\profile-pic.png" alt="Profile Picture" 
+            onclick="openImageModal()"
+            class="rounded-full w-32 hover:scale-105 transition-transform duration-300 hover:shadow-lg mx-auto mb-2 cursor-pointer">
+        
+        <div class="flex flex-col items-center gap-1">
+            <h3 class="flex items-end gap-1 text-xl md:text-2xl font-Ovo mb-0">
+                Hi! I'm Yash Sunil Dhotre <img src="./images/hand-icon.png" alt="Hand Icon" class="w-5 animate-wave">
+            </h3>
+            <h3 class="text-xl md:text-2xl font-Ovo text-purple-600 h-8 typewriter mb-1">
+                <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+            </h3>
+        </div>
+
+        <h1 class="text-xl sm:text-3xl lg:text-4xl font-Ovo mb-2">
+            Final Year Civil Engineering Student In DBATU, Lonere
+        </h1>
+        <p class="max-w-xl mx-auto font-Ovo mb-4 text-gray-600 dark:text-gray-300 text-sm leading-6">
+            “I’m a passionate and detail-oriented Civil Engineering student from Mahad, Maharashtra, pursuing my B.Tech at DBATU Lonere. With a strong foundation in site execution, structural design, and quantity estimation, I strive to combine practical field experience with innovative engineering tools like AutoCAD, STAAD Pro, and Excel. My goal is to create safe, efficient, and sustainable structures that truly make a difference in the real world.”
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mt-2">
+            <a href="#contact"
+                class="px-8 py-2.5 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                Contact Me <img src="./images/right-arrow-white.png" alt="Right Arrow" class="w-4 transition-transform duration-300 group-hover:translate-x-1">
+            </a>
+
+            <a href="images\logo-white-removebg-preview.png" download
+                class="px-8 py-2.5 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black hover:bg-gray-100 transform hover:scale-105 transition-all duration-300">
+                My Resume <img src="./images/download-icon.png" alt="Download Icon" class="w-4 transition-transform duration-300 group-hover:translate-y-1">
+            </a>
+        </div>
+    </div>
+
+
+    <!-- About section -->
+    <div id="about" class="section-container w-full px-[12%] scroll-mt-20">
+        <div class="section-header">
+            <h4 class="text-center text-lg font-Ovo">Introduction</h4>
+            <h2 class="text-center text-5xl font-Ovo">About me</h2>
+        </div>
+
+        <div class="mt-8 mb-16 max-w-7xl mx-auto">
+            <!-- Main paragraph - full width -->
+            <p class="mb-10 max-w-4xl mx-auto font-Ovo text-center">"I'm Yash Dhotre, a final-year Civil Engineering student at Dr. Babasaheb Ambedkar Technological University (DBATU), Lonere. I began my journey with a Diploma in Civil Engineering, where I discovered my passion for construction, design, and site work. Over the years, I've gained hands-on experience through internships in foundation and RCC projects, learning how theory meets real-world challenges. Skilled in AutoCAD, STAAD Pro, and Excel, I focus on designing efficient, safe, and sustainable structures while continuously improving my practical and analytical skills. My goal is to grow from a site engineer into a planning and quantity surveying professional who builds not just projects — but trust and quality in every structure."</p>
+
+            <!-- Image and Cards Row -->
+            <div class="flex flex-col lg:flex-row items-center gap-10 mb-10">
+                <!-- Image -->
+                <div class="w-full lg:w-1/3 flex justify-center">
+                    <div class="max-w-max mx-auto relative">
+                        <img src="images\profile-pic-full.jpg" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none hover:scale-105 transition-transform duration-300 hover:shadow-xl">
+
+                        <div class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
+                            <img src="images\circular.logo-removebg-preview.png" alt="" class="w-full animate-spin_slow">
+                            <img src="./images/dev-icon.png" alt="" class="w-1/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Three Cards -->
+                <div class="w-full lg:w-2/3">
+                    <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
+                        <a href="skills-details.html" class="block border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+    
+                            <img src="./images/code-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                            <img src="./images/code-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                        
+                            <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Softwares</h3>
+                            <p class="text-gray-600 text-sm dark:text-white/80">AutoCad, Staad.Pro, Revit Architeture, MS Excel,Word,Power point </p>
+                            
+                        </a>
+                        <a href="education-details.html" class="block border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+
+                            <img src="./images/edu-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                            <img src="./images/edu-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                    
+                            <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Education</h3>
+                            <p class="text-gray-600 text-sm dark:text-white/80">🎓Completed Diploma in Civil Engineering,<br> 
+                                📚Currently pursuing B.Tech in Civil Engineering, Dr. Babasaheb Ambedkar Technological University, Lonere </p>
+                            
+                        </a>
+                        <a href="projects-details.html" class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+
+                            <img src="./images/project-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                            <img src="./images/project-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+
+
+                            <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Projects</h3>
+                            <p class="text-gray-600 text-sm dark:text-white/80">Built more than 5 projects </p>
+                        </a>
+                    </ul>
+
+                    <!-- Tools Section -->
+                    <div>
+                        <h4 class="my-6 text-gray-700 font-Ovo dark:text-white/80">Tools I use</h4>
+
+                        <ul class="flex items-center gap-3 sm:gap-5 flex-wrap">
+                            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 hover:scale-110 transition-all duration-300 hover:shadow-lg hover:border-purple-500">
+                                <img src="./images/autocad-icon.png" alt="AutoCAD" title="AutoCAD" class="w-8 sm:w-10">
+                            </li>
+                            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 hover:scale-110 transition-all duration-300 hover:shadow-lg hover:border-purple-500">
+                                <img src="./images/staad-pro-icon.png" alt="STAAD.Pro" title="STAAD.Pro" class="w-8 sm:w-10">
+                            </li>
+                            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 hover:scale-110 transition-all duration-300 hover:shadow-lg hover:border-purple-500">
+                                <img src="./images/excel-icon.png" alt="Microsoft Excel" title="Microsoft Excel" class="w-8 sm:w-10">
+                            </li>
+                            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 hover:scale-110 transition-all duration-300 hover:shadow-lg hover:border-purple-500">
+                                <img src="./images/word-icon.png" alt="Microsoft Word" title="Microsoft Word" class="w-8 sm:w-10">
+                            </li>
+                            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 hover:scale-110 transition-all duration-300 hover:shadow-lg hover:border-purple-500">
+                                <img src="./images/vscode-icon.png" alt="VS Code" title="VS Code" class="w-8 sm:w-10">
+                            </li>
+                            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 hover:scale-110 transition-all duration-300 hover:shadow-lg hover:border-purple-500">
+                                <img src="./images/chatgpt-icon.png" alt="ChatGPT" title="ChatGPT" class="w-8 sm:w-10 dark:hidden">
+                                <img src="./images/ChatGPT-Dark.png" alt="ChatGPT" title="ChatGPT" class="w-8 sm:w-10 hidden dark:block">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- Services section -->
+      <div id="services" class="section-container section-alternate w-full px-[12%] scroll-mt-20">
+        <div class="section-header">
+            <h4 class="text-center mb-2 text-lg font-Ovo">What i offer</h4>
+            <h2 class="text-center text-5xl font-Ovo">My Expertise</h2>
+            <p class="text-center max-w-2xl mx-auto mt-5 font-Ovo">As a passionate civil engineering student, I bring expertise in design, planning, and construction-related services. Here's what I can do for you.</p>
+        </div>
+        <div class="grid grid-cols-auto gap-6 my-10">
+            <div class="border border-gray-400 rounded-lg px-8 py-12 card-zoom
+            hover:shadow-lg cursor-pointer hover:bg-lightHover transform hover:-translate-y-2 transition-all duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./images/Struchural-design.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Structural Design</h3>
+                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Designing safe and sustainable structures, specializing in <strong>RCC Structural Design (Hand Calculations)</strong> and analysis using industry-standard tools.</p>
+                <a href="" class="flex items-center gap-2 text-sm mt-5">Read more <img src="./images/right-arrow.png" alt=""
+                    class="w-4"></a>
+            </div>
+            <div class="border border-gray-400 rounded-lg px-8 py-12 card-zoom
+            hover:shadow-lg cursor-pointer hover:bg-lightHover transform hover:-translate-y-2 transition-all duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./images/estimate.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Project Estimation</h3>
+                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Accurate <strong>Quantity Estimation & Billing</strong> for construction projects, focusing on detailed material and cost management.</p>
+                <a href="" class="flex items-center gap-2 text-sm mt-5">Read more <img src="./images/right-arrow.png" alt=""
+                    class="w-4"></a>
+            </div>
+            <div class="border border-gray-400 rounded-lg px-8 py-12 card-zoom
+            hover:shadow-lg cursor-pointer hover:bg-lightHover transform hover:-translate-y-2 transition-all duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./images/CAD-Drafting.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white">CAD Drafting</h3>
+                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Creating detailed 2D and 3D technical drawings and blueprints using <strong>AutoCAD</strong> to ensure accuracy and clarity in every task.</p>
+                <a href="" class="flex items-center gap-2 text-sm mt-5">Read more <img src="./images/right-arrow.png" alt=""
+                    class="w-4"></a>
+            </div>
+            <div class="border border-gray-400 rounded-lg px-8 py-12 card-zoom
+            hover:shadow-lg cursor-pointer hover:bg-lightHover transform hover:-translate-y-2 transition-all duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./images/site-supervision.jpg" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Site Supervision</h3>
+                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Providing hands-on <strong>Site Supervision & Coordination</strong> to oversee construction quality, safety, and daily progress recording.</p>
+                <a href="" class="flex items-center gap-2 text-sm mt-5">Read more <img src="./images/right-arrow.png" alt=""
+                    class="w-4"></a>
+            </div>
+        </div>
+      </div>
+    <!-- Work section -->
+<div id="work" class="section-container w-full px-[12%] scroll-mt-20">
+    <div class="section-header">
+      <h4 class="text-center mb-2 text-lg font-Ovo">My portfolio</h4>
+      <h2 class="text-center text-5xl font-Ovo">My Work Experience</h2>
+      <p class="text-center max-w-2xl mx-auto mt-5 font-Ovo">
+        Explore some of the projects I've worked on during my academic journey and internships, showcasing my skills in design, analysis, and construction.
+      </p>
+    </div>
+  
+    <div class="grid grid-cols-auto my-10 gap-5 dark:text-black">
+      <a href="work1-drawings.html" aria-label="Submition Drawings details" class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group overflow-hidden zoom-element">
+        <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between transition-all duration-500 group-hover:bottom-7 group-hover:shadow-lg">
+          <div>
+            <h2 class="font-semibold">Submition Drowings</h2>
+            <p class="text-sm text-gray-700">AutoCad , Staad.Pro</p>
+          </div>
+          <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition-all duration-300 transform group-hover:rotate-12">
+            <img src="./images/send-icon.png" alt="" class="w-5">
+          </div>
+        </div>
+      </a>
+  
+      <a href="work2-estimation.html" aria-label="Material Estimation details" class="aspect-square bg-[url('./images/work-2.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group overflow-hidden zoom-element">
+        <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between transition-all duration-500 group-hover:bottom-7 group-hover:shadow-lg">
+          <div>
+            <h2 class="font-semibold">Material Estimation</h2>
+            <p class="text-sm text-gray-700">Excel Sheet, MS Word</p>
+          </div>
+          <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition-all duration-300 transform group-hover:rotate-12">
+            <img src="./images/send-icon.png" alt="" class="w-5">
+          </div>
+        </div>
+      </a>
+  
+      <a href="work3-automation.html" aria-label="Automation Sheets details" class="aspect-square bg-[url('./images/work-3.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group overflow-hidden zoom-element">
+        <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between transition-all duration-500 group-hover:bottom-7 group-hover:shadow-lg">
+          <div>
+            <h2 class="font-semibold">Automation Sheets</h2>
+            <p class="text-sm text-gray-700">Excel Sheet, Python Codes</p>
+          </div>
+          <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition-all duration-300 transform group-hover:rotate-12">
+            <img src="./images/send-icon.png" alt="" class="w-5">
+          </div>
+        </div>
+      </a>
+  
+      <a href="work4-internship.html" aria-label="Internship Experience details" class="aspect-square bg-[url('./images/work-4.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group overflow-hidden zoom-element">
+        <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between transition-all duration-500 group-hover:bottom-7 group-hover:shadow-lg">
+          <div>
+            <h2 class="font-semibold">Internship Experience</h2>
+            <p class="text-sm text-gray-700">Reports</p>
+          </div>
+          <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition-all duration-300 transform group-hover:rotate-12">
+            <img src="./images/send-icon.png" alt="" class="w-5">
+          </div>
+        </div>
+      </a>
+    </div>
+  
+    <a href="#" class="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover">
+      Show more
+      <img src="./images/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
+      <img src="./images/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block">
+    </a>
+  </div>
+    <!-- Contact section -->
+    <div id="contact" class="section-container section-alternate w-full px-[12%] scroll-mt-20 bg-gradient-to-b from-white to-purple-50 dark:from-darkTheme dark:to-purple-900/20">
+        <div class="section-header">
+            <h4 class="text-center mb-2 text-lg font-Ovo text-purple-600 dark:text-purple-400">Connect with me</h4>
+            <h2 class="text-center text-5xl font-Ovo mb-4">Let's Collaborate</h2>
+            <p class="text-center max-w-2xl mx-auto mt-5 font-Ovo text-gray-600 dark:text-gray-300">
+                "I'd love to hear from you! Whether you have questions about my work, opportunities for collaboration, or feedback, feel free to reach out."
+            </p>
+        </div>
+
+        <div class="max-w-5xl mx-auto mt-12 grid grid-cols-1 lg:grid-cols-5 gap-8">
+            <!-- Contact Info Cards -->
+            <div class="lg:col-span-2 space-y-6">
+                <div class="bg-white dark:bg-darkHover/30 p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-purple-100 dark:border-purple-900">
+                    <div class="flex items-start gap-4">
+                        <div class="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
+                            <img src="./images/mail_icon.png" alt="" class="w-6 dark:hidden">
+                            <img src="./images/mail_icon_dark.png" alt="" class="w-6 hidden dark:block">
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-1">Email</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Yashdhotre74@gmail.com</p>
+                            <a href="mailto:Yashdhotre74@gmail.com" class="text-purple-600 dark:text-purple-400 text-sm mt-2 inline-block hover:underline">Send email →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-darkHover/30 p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-purple-100 dark:border-purple-900">
+                    <div class="flex items-start gap-4">
+                        <div class="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
+                            <img src="./images/location-icon.png" alt="" class="w-6">
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-1">Location</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Mahad, Raigad, Maharashtra</p>
+                            <a href="https://maps.google.com" target="_blank" class="text-purple-600 dark:text-purple-400 text-sm mt-2 inline-block hover:underline">View on map →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-darkHover/30 p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-purple-100 dark:border-purple-900">
+                    <div class="flex items-start gap-4">
+                        <div class="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
+                            <img src="./images/social-icon.png" alt="" class="w-6 dark:hidden">
+                            <img src="./images/social-icon-dark.png" alt="" class="w-6 hidden dark:block">
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-1">Social Profiles</h3>
+                            <div class="flex gap-4 mt-3">
+                                <a href="https://github.com/Yashdhotre74" target="_blank" class="p-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-all">
+                                    <img src="./images/github.png" alt="GitHub" class="w-5 h-5">
+                                </a>
+                                <a href="https://github.com/Yashdhotre74" target="_blank" class="p-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-all">
+                                    <img src="./images/linkedin.png" alt="LinkedIn" class="w-5 h-5">
+                                </a>
+                                <a href="https://github.com/Yashdhotre74" target="_blank" class="p-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-all">
+                                    <img src="./images/twitter.png" alt="Twitter" class="w-5 h-5">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="lg:col-span-3 bg-white dark:bg-darkHover/30 p-8 rounded-2xl shadow-lg border border-purple-100 dark:border-purple-900">
+                <h3 class="text-2xl font-Ovo mb-6">Send me a message</h3>
+                <form method="POST" action="https://api.web3forms.com/submit" class="space-y-6">
+                    <input type="hidden" name="access_key" value="a507fd35-cc87-400e-a6ad-dcaea7331954">
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm text-gray-600 dark:text-gray-300">Your Name</label>
+                            <input type="text" placeholder="John Doe" 
+                                class="w-full p-3 rounded-lg outline-none border border-gray-200 dark:border-purple-900/50 bg-gray-50 dark:bg-darkHover/30 focus:border-purple-500 dark:focus:border-purple-400 transition-all"
+                                required name="name">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm text-gray-600 dark:text-gray-300">Your Email</label>
+                            <input type="email" placeholder="john@example.com" 
+                                class="w-full p-3 rounded-lg outline-none border border-gray-200 dark:border-purple-900/50 bg-gray-50 dark:bg-darkHover/30 focus:border-purple-500 dark:focus:border-purple-400 transition-all"
+                                required name="email">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-sm text-gray-600 dark:text-gray-300">Message</label>
+                        <textarea rows="6" placeholder="Your message here..." 
+                            class="w-full p-3 rounded-lg outline-none border border-gray-200 dark:border-purple-900/50 bg-gray-50 dark:bg-darkHover/30 focus:border-purple-500 dark:focus:border-purple-400 transition-all"
+                            required name="message"></textarea>
+                    </div>
+
+                    <button class="w-full py-3 px-6 bg-gradient-to-r from-purple-600 to-purple-800 text-white rounded-lg hover:shadow-lg transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2">
+                        Send Message
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Update the footer div -->
+<div class="mt-20">
+    <div class="text-center">
+        <img src="./images/logo.png" alt="" class="w-24 mx-auto mb-2 dark:hidden">
+        <img src="./images/logo_dark.png" alt="" class="w-24 mx-auto mb-2 hidden dark:block">
+
+        <div class="w-max flex items-center gap-2 mx-auto">
+            <img src="./images/mail_icon.png" alt="" class="w-6 dark:hidden">
+            <img src="./images/mail_icon_dark.png" alt="" class="w-6 hidden dark:block">
+
+            Yashdhotre74@gmail.com
+        </div>
+    </div>
+    <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+        <p>© 2025 Yash Dhotre. All rights reserved.</p>
+        <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+            <li><a target="_blank" href="https://github.com/Yashdhotre74" class="hover:text-purple-600 transition-colors">GitHub</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/yash-dhotre/" class="hover:text-purple-600 transition-colors">LinkedIn</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/yash-dhotre/" class="hover:text-purple-600 transition-colors">Twitter</a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="./script.js"></script>
+<script>
+    const typedTextSpan = document.querySelector(".typed-text");
+    const texts = ["I'm a Civil Engineer", "I'm an Aspiring Quantity Surveyor", "I'm an Aspiring Planning Engineer", "I'm a Certified Prompt Engineer", "I'm a Content Creator"];
+    let textIndex = 0;
+    let charIndex = 0;
+    
+    function type() {
+        if (charIndex < texts[textIndex].length) {
+            typedTextSpan.textContent += texts[textIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, 50);
+        } else {
+            setTimeout(erase, 2000);
+        }
+    }
+    
+    function erase() {
+        if (charIndex > 0) {
+            typedTextSpan.textContent = texts[textIndex].substring(0, charIndex-1);
+            charIndex--;
+            setTimeout(erase, 25);
+        } else {
+            textIndex++;
+            if (textIndex >= texts.length) textIndex = 0;
+            setTimeout(type, 500);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(type, 1000);
+    });
+
+    // Handle nav bar background opacity on scroll
+    window.addEventListener('scroll', function() {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.style.background = document.documentElement.classList.contains('dark') 
+                ? 'rgba(17, 0, 31, 0.95)' 
+                : 'rgba(255, 255, 255, 0.95)';
+        } else {
+            nav.style.background = document.documentElement.classList.contains('dark')
+                ? 'rgba(17, 0, 31, 0.9)'
+                : 'rgba(255, 255, 255, 0.9)';
+        }
+    });
+
+    // Update nav background when theme changes
+    function updateNavBackground() {
+        const nav = document.querySelector('nav');
+        nav.style.background = document.documentElement.classList.contains('dark')
+            ? 'rgba(17, 0, 31, 0.9)'
+            : 'rgba(255, 255, 255, 0.9)';
+    }
+
+    // Add this to your existing theme toggle function in script.js
+    const originalToggleTheme = window.toggleTheme;
+    window.toggleTheme = function() {
+        originalToggleTheme();
+        updateNavBackground();
+    };
+
+    // Update the JavaScript for modal
+    function openImageModal() {
+        const modal = document.getElementById('imageModal');
+        modal.classList.remove('hidden');
+        document.addEventListener('keydown', handleEscapeKey);
+        
+        // Add animation to the image
+        const modalImage = modal.querySelector('img');
+        modalImage.style.transform = 'scale(0.9)';
+        setTimeout(() => {
+            modalImage.style.transform = 'scale(1)';
+        }, 50);
+    }
+
+    function closeImageModal(event) {
+        // Prevent event bubbling if clicking the close button
+        if (event) {
+            event.stopPropagation();
+        }
+        
+        const modal = document.getElementById('imageModal');
+        const modalImage = modal.querySelector('img');
+        
+        modalImage.style.transform = 'scale(0.9)';
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 200);
+
+        // Remove the escape key event listener
+        document.removeEventListener('keydown', handleEscapeKey);
+    }
+
+    // Handle escape key press
+    function handleEscapeKey(event) {
+        if (event.key === 'Escape') {
+            closeImageModal();
+        }
+    }
+
+    // Close modal when clicking outside the image
+    document.getElementById('imageModal').addEventListener('click', function(event) {
+        if (event.target === this || event.target.classList.contains('backdrop-blur-md')) {
+            closeImageModal();
+        }
+    });
+</script>
+</body>
+</html>

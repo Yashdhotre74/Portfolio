@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Subjects | Yash Dhotre</title>
+    <link rel="icon" type="image/png" href="./images/yash-profile.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #EEF2FF 0%, #ffffff 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+            background: #ffffff;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.08);
+            border: 1px solid rgba(79, 70, 229, 0.1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(79, 70, 229, 0.12);
+            border: 1px solid rgba(79, 70, 229, 0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-indigo-100 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <img src="./images/yash-profile.png" alt="Yash Dhotre" class="w-10 h-10 rounded-full">
+                    <div class="flex flex-col">
+                        <h1 class="text-2xl font-bold text-indigo-950">My College</h1>
+                        <div class="flex items-center mt-1">
+                            <span class="text-sm font-medium text-indigo-800">DBATU Civil Engineering</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://yashdhotreportfolio.civiondesign.site" 
+                   class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors shadow-sm">
+                    Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-32 pb-16 text-center px-4">
+        <h1 class="text-5xl md:text-6xl font-bold text-indigo-950 mb-6">College Subjects</h1>
+        <p class="text-lg text-indigo-800 max-w-2xl mx-auto font-medium">
+            Access comprehensive study materials and resources for Civil Engineering curriculum
+        </p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Design of Steel Structures -->
+            <div class="card-hover rounded-3xl p-8">
+                <h3 class="text-2xl font-bold text-indigo-950 mb-4">Design of Steel Structures</h3>
+                <p class="text-indigo-800 mb-8 text-lg">
+                    Comprehensive study materials and design calculations for steel structural elements.
+                </p>
+                <a href="#" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 group font-medium">
+                    View Materials
+                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" 
+                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- SACE -->
+            <div class="card-hover rounded-3xl p-8">
+                <h3 class="text-2xl font-bold text-indigo-950 mb-4">SACE</h3>
+                <p class="text-indigo-800 mb-8 text-lg">
+                    Software Assignments: Structural Analysis and AutoCAD designs.
+                </p>
+                <a href="https://sites.google.com/view/civiondesigns-sace/home" 
+                   class="inline-flex items-center text-indigo-600 hover:text-indigo-800 group font-medium">
+                    Access Materials
+                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" 
+                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </a>
+            </div>
+
+                        <!-- Engineering Manegment -->
+            <div class="card-hover rounded-3xl p-8">
+                <h3 class="text-2xl font-bold text-indigo-950 mb-4">Engineering Mangment</h3>
+                <p class="text-indigo-800 mb-8 text-lg">
+                   Study Materials And Nots Of EM 
+                </p>
+                <a href="https://sites.google.com/view/civiondesign-site/home" 
+                   class="inline-flex items-center text-indigo-600 hover:text-indigo-800 group font-medium">
+                    Access Materials
+                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" 
+                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white/90 backdrop-blur-md border-t border-indigo-100">
+        <div class="max-w-7xl mx-auto px-6 py-6">
+            <p class="text-center text-indigo-800">
+                © 2025 Yash Dhotre. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Authorization check
+        if (!sessionStorage.getItem("authorized")) {
+            window.location.href = "college-work.html";
+        }
+    </script>
+</body>
+</html>

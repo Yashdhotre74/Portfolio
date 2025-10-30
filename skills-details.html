@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yash Dhotre | Skills & Expertise</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#004080; /* Blueprint Blue */
+  --accent:#FF7A00;  /* Construction Orange */
+  --bg:#F5F7FA;
+  --text:#0f172a;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+/* Blueprint background animation */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background-image:linear-gradient(0deg,transparent 24%,rgba(255,255,255,.05) 25%,rgba(255,255,255,.05) 26%,transparent 27%,transparent 74%,rgba(255,255,255,.05) 75%,rgba(255,255,255,.05) 76%,transparent 77%,transparent),
+  linear-gradient(90deg,transparent 24%,rgba(255,255,255,.05) 25%,rgba(255,255,255,.05) 26%,transparent 27%,transparent 74%,rgba(255,255,255,.05) 75%,rgba(255,255,255,.05) 76%,transparent 77%,transparent);
+  background-size:60px 60px;
+  animation:gridMove 60s linear infinite;
+  z-index:-1;
+}
+@keyframes gridMove{
+  from{background-position:0 0;}
+  to{background-position:1000px 1000px;}
+}
+
+/* Header */
+header{
+  background:linear-gradient(90deg,var(--primary),#003366);
+  color:#fff;
+  padding:15px 30px;
+  display:flex;justify-content:space-between;align-items:center;
+  box-shadow:0 3px 15px rgba(0,0,0,0.15);
+  position:sticky;top:0;z-index:100;
+}
+header h1{font-size:20px;font-weight:600;}
+header a{
+  background:var(--accent);color:#fff;text-decoration:none;
+  padding:8px 16px;border-radius:25px;transition:.3s;
+}
+header a:hover{background:#ffa54c;}
+
+/* Hero */
+.hero{
+  text-align:center;padding:80px 20px;background:linear-gradient(180deg,var(--primary),#002a5c);
+  color:#fff;
+}
+.hero h2{font-size:36px;margin-bottom:10px;}
+.hero p{max-width:800px;margin:auto;font-size:17px;opacity:.9;}
+
+/* Skill progress section */
+.skills-section{
+  width:90%;max-width:1100px;margin:60px auto;text-align:center;
+}
+.skill-bar{
+  margin:20px 0;text-align:left;
+}
+.skill-bar h3{margin-bottom:8px;font-weight:600;color:var(--primary);}
+.bar{
+  background:#dce3ec;height:10px;border-radius:10px;overflow:hidden;
+}
+.bar-fill{
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  height:100%;width:0;border-radius:10px;transition:width 2s ease;
+}
+.skill-bar[data-progress] .bar-fill{width:attr(data-progress);}
+
+/* Skill Cards */
+.skill-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:25px;width:90%;max-width:1100px;margin:80px auto;
+}
+.card{
+  background:#fff;
+  border-left:6px solid var(--primary);
+  padding:25px;border-radius:14px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:transform .3s, box-shadow .3s;
+}
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,0.15);}
+.card h3{color:var(--primary);margin-bottom:8px;}
+.card p{font-size:15px;color:#475569;}
+.card button{
+  margin-top:10px;background:var(--accent);color:#fff;
+  border:none;padding:8px 16px;border-radius:20px;cursor:pointer;
+  transition:.3s;
+}
+.card button:hover{background:#ffa54c;}
+
+/* Modal */
+.modal{
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;
+  z-index:999;
+}
+.modal-content{
+  background:#fff;padding:30px;border-radius:12px;
+  max-width:650px;width:90%;max-height:80vh;overflow-y:auto;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+.modal-content h2{color:var(--primary);margin-bottom:10px;}
+.modal-content p{color:#334155;font-size:15px;line-height:1.6;}
+.close-btn{
+  float:right;font-size:20px;font-weight:bold;cursor:pointer;color:var(--accent);
+}
+
+/* Footer */
+footer{
+  text-align:center;padding:25px;background:linear-gradient(90deg,var(--primary),#003366);
+  color:#fff;margin-top:80px;font-size:14px;
+}
+
+@media(max-width:600px){
+  .hero h2{font-size:28px;}
+  header h1{font-size:18px;}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>My Engineering Skills</h1>
+  <a href="index.html">← Back to Portfolio</a>
+</header>
+
+<section class="hero">
+  <h2>Turning Civil Concepts Into Reality</h2>
+  <p>I design, analyze, and automate structures using modern engineering tools and AI assistance — ensuring every project is strong, efficient, and future-ready.</p>
+</section>
+
+<!-- Skill Progress Bars -->
+<div class="skills-section">
+  <div class="skill-bar" data-progress="95%">
+    <h3>AutoCAD</h3>
+    <div class="bar"><div class="bar-fill" style="width:95%"></div></div>
+  </div>
+  <div class="skill-bar" data-progress="90%">
+    <h3>STAAD Pro</h3>
+    <div class="bar"><div class="bar-fill" style="width:90%"></div></div>
+  </div>
+  <div class="skill-bar" data-progress="88%">
+    <h3>Microsoft Excel</h3>
+    <div class="bar"><div class="bar-fill" style="width:88%"></div></div>
+  </div>
+  <div class="skill-bar" data-progress="75%">
+    <h3>Revit</h3>
+    <div class="bar"><div class="bar-fill" style="width:75%"></div></div>
+  </div>
+  <div class="skill-bar" data-progress="70%">
+    <h3>MS Project / Primavera</h3>
+    <div class="bar"><div class="bar-fill" style="width:70%"></div></div>
+  </div>
+  <div class="skill-bar" data-progress="80%">
+    <h3>AI Automation</h3>
+    <div class="bar"><div class="bar-fill" style="width:80%"></div></div>
+  </div>
+</div>
+
+<!-- Skill Cards -->
+<div class="skill-grid">
+  <div class="card">
+    <h3>AutoCAD</h3>
+    <p>Precise 2D drafting & reinforcement detailing for construction-ready drawings.</p>
+    <button onclick="openModal('cad')">Know More</button>
+  </div>
+  <div class="card">
+    <h3>STAAD Pro</h3>
+    <p>Structural modelling, load application and RCC/Steel design verification.</p>
+    <button onclick="openModal('staad')">Know More</button>
+  </div>
+  <div class="card">
+    <h3>Microsoft Excel</h3>
+    <p>Automated estimation sheets, BOQs and billing reports.</p>
+    <button onclick="openModal('excel')">Know More</button>
+  </div>
+  <div class="card">
+    <h3>Revit (BIM Basics)</h3>
+    <p>Model coordination and quantity extraction for integrated workflows.</p>
+    <button onclick="openModal('revit')">Know More</button>
+  </div>
+  <div class="card">
+    <h3>MS Project / Primavera</h3>
+    <p>Activity scheduling, CPM analysis and site progress monitoring.</p>
+    <button onclick="openModal('project')">Know More</button>
+  </div>
+  <div class="card">
+    <h3>Prompt Engineering & AI</h3>
+    <p>Automating BOQs, reports, and site documentation using AI tools.</p>
+    <button onclick="openModal('ai')">Know More</button>
+  </div>
+</div>
+
+<!-- Modals -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalBody"></p>
+  </div>
+</div>
+
+<footer>© 2025 Yash Dhotre | Civil Engineer | Mahad, Maharashtra</footer>
+
+<script>
+const modal=document.getElementById("modal");
+const title=document.getElementById("modalTitle");
+const body=document.getElementById("modalBody");
+
+const skillInfo={
+  cad:`I produce construction-ready 2D drawings and reinforcement details using AutoCAD. Deliverables include site layout plans, structural detail sheets, bar bending details and contractor-ready PDFs. Focus is always on clarity and execution efficiency.`,
+  staad:`I model structures in STAAD Pro applying all design loads per IS codes. Cross-check member forces with hand calculations to ensure accurate, safe and practical designs.`,
+  excel:`Excel is my tool for BOQs, rate analysis, billing sheets and automated estimations. I use advanced formulas and structured templates to save time and reduce human error.`,
+  revit:`I coordinate BIM drawings, extract quantities, and ensure multi-disciplinary model compatibility using Revit for improved planning and execution.`,
+  project:`I develop construction schedules with logical sequencing and milestones, helping teams visualize project timelines clearly.`,
+  ai:`I build prompt workflows for AI tools like ChatGPT and Gemini to automate repetitive engineering tasks — report writing, estimation summaries, and formatted documentation.`
+};
+
+function openModal(key){
+  modal.style.display="flex";
+  title.textContent=key.toUpperCase();
+  body.textContent=skillInfo[key];
+}
+function closeModal(){
+  modal.style.display="none";
+}
+window.onclick=function(e){
+  if(e.target==modal){closeModal();}
+};
+</script>
+
+</body>
+</html>

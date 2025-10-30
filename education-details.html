@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education | Yash Dhotre</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#004080;
+  --accent:#FF7A00;
+  --bg:#F5F7FA;
+  --text:#0f172a;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  scroll-behavior:smooth;
+}
+
+/* Blueprint grid background */
+body::before{
+  content:"";
+  position:fixed;top:0;left:0;
+  width:100%;height:100%;
+  background-image:linear-gradient(0deg,transparent 24%,rgba(255,255,255,.05) 25%,rgba(255,255,255,.05) 26%,transparent 27%,transparent 74%,rgba(255,255,255,.05) 75%,rgba(255,255,255,.05) 76%,transparent 77%,transparent),
+  linear-gradient(90deg,transparent 24%,rgba(255,255,255,.05) 25%,rgba(255,255,255,.05) 26%,transparent 27%,transparent 74%,rgba(255,255,255,.05) 75%,rgba(255,255,255,.05) 76%,transparent 77%,transparent);
+  background-size:60px 60px;
+  animation:gridMove 60s linear infinite;
+  z-index:-1;
+}
+@keyframes gridMove{
+  from{background-position:0 0;}
+  to{background-position:1000px 1000px;}
+}
+
+/* Header */
+header{
+  background:linear-gradient(90deg,var(--primary),#003366);
+  color:#fff;
+  padding:15px 30px;
+  display:flex;justify-content:space-between;align-items:center;
+  box-shadow:0 3px 15px rgba(0,0,0,0.15);
+  position:sticky;top:0;z-index:100;
+}
+header h1{font-size:20px;font-weight:600;}
+header a{
+  background:var(--accent);
+  color:#fff;text-decoration:none;
+  padding:8px 16px;border-radius:25px;
+  transition:.3s;
+}
+header a:hover{background:#ffa54c;}
+
+/* Hero */
+.hero{
+  text-align:center;
+  padding:80px 20px;
+  background:linear-gradient(180deg,var(--primary),#002a5c);
+  color:#fff;
+}
+.hero h2{font-size:36px;margin-bottom:10px;}
+.hero p{max-width:800px;margin:auto;font-size:17px;opacity:.9;}
+
+/* Timeline */
+.timeline{
+  position:relative;
+  width:90%;max-width:900px;
+  margin:80px auto;
+}
+.timeline::before{
+  content:"";
+  position:absolute;left:50%;top:0;
+  transform:translateX(-50%);
+  width:4px;height:100%;
+  background:var(--primary);
+  border-radius:10px;
+}
+.entry{
+  position:relative;
+  width:50%;
+  padding:30px 40px;
+  opacity:0;
+  transform:translateY(30px);
+  transition:all .6s ease;
+}
+.entry.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+.entry::before{
+  content:"";
+  position:absolute;
+  top:35px;right:-10px;
+  width:20px;height:20px;
+  background:var(--accent);
+  border:4px solid #fff;
+  border-radius:50%;
+  z-index:10;
+}
+.entry:nth-child(even){
+  left:50%;
+  text-align:left;
+}
+.entry:nth-child(even)::before{
+  left:-10px;
+  right:auto;
+}
+.entry:nth-child(odd){
+  left:0;
+  text-align:right;
+}
+.entry:nth-child(odd)::before{
+  right:-10px;
+  left:auto;
+}
+.entry-box{
+  background:#fff;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,.1);
+  transition:.3s;
+}
+.entry-box:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+.entry h3{color:var(--primary);margin-bottom:8px;}
+.entry span{font-size:14px;color:#475569;font-weight:500;}
+.entry p{font-size:15px;color:#334155;margin-top:10px;}
+
+/* College Section */
+.college-section{
+  background:#fff;
+  width:90%;max-width:950px;
+  margin:100px auto;
+  padding:40px;
+  border-radius:18px;
+  box-shadow:0 5px 25px rgba(0,0,0,0.1);
+  text-align:center;
+}
+.college-section h3{
+  color:var(--primary);
+  font-size:24px;
+  margin-bottom:10px;
+}
+.college-section p{
+  color:#475569;
+  font-size:15px;
+  margin-bottom:20px;
+}
+.college-section a{
+  display:inline-block;
+  background:var(--accent);
+  color:#fff;
+  padding:10px 20px;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+.college-section a:hover{
+  background:#ffa54c;
+  transform:translateY(-3px);
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:25px;
+  background:linear-gradient(90deg,var(--primary),#003366);
+  color:#fff;
+  margin-top:80px;
+  font-size:14px;
+}
+
+@media(max-width:768px){
+  .timeline::before{left:10px;}
+  .entry{width:100%;padding-left:40px;margin-bottom:40px;}
+  .entry::before{left:0!important;right:auto;}
+  .entry-box{text-align:left;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>My Education</h1>
+  <a href="index.html">← Back to Portfolio</a>
+</header>
+
+<section class="hero">
+  <h2>My Educational Journey</h2>
+  <p>From foundation-level learning to advanced design and analysis, my education has shaped both my technical expertise and practical mindset as a Civil Engineer.</p>
+</section>
+
+<section class="timeline">
+  <div class="entry">
+    <div class="entry-box">
+      <h3>Diploma in Civil Engineering</h3>
+      <span>2019 – 2022 | Government Polytechnic, Ratnagiri</span>
+      <p>Strengthened my fundamentals in construction materials, surveying, and RCC design. Participated in on-site training that enhanced my understanding of foundations and reinforcement detailing.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-box">
+      <h3>B.Tech in Civil Engineering</h3>
+      <span>2022 – 2025 | <a href="https://dbatu.ac.in" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:600;">Dr. Babasaheb Ambedkar Technological University (DBATU), Lonere</a></span>
+      <p>Specialized in structural analysis, RCC design, and project management. Developed proficiency in AutoCAD, STAAD Pro, and Excel for analysis, estimation, and BOQ automation. Final-year project focuses on flood management and slope stabilization.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-box">
+      <h3>Academic Projects & Internships</h3>
+      <span>2023 – 2025</span>
+      <p>Completed site internship focused on RCC foundations and quality checks. Worked on “Structural Analysis of G+1 Residential Building” and “Estimation and Costing for Residential Construction.”</p>
+    </div>
+  </div>
+</section>
+
+<section class="college-section">
+  <h3>My College Section</h3>
+  <p>To explore my campus life, academic journey, achievements, and my works during my studies at DBATU — visit my college section.</p>
+  <a href="college-work.html">🎓 Dive Deep into College Section</a>
+</section>
+
+<footer>
+  © 2025 Yash Dhotre | Civil Engineering Student | Mahad, Maharashtra
+</footer>
+
+<script>
+  // Reveal animation for timeline
+  const entries=document.querySelectorAll('.entry');
+  const observer=new IntersectionObserver((entriesList)=>{
+    entriesList.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  },{threshold:0.2});
+  entries.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>

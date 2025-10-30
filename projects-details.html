@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Projects | Yash Dhotre</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#004080;
+  --accent:#FF7A00;
+  --bg:#F5F7FA;
+  --text:#0f172a;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:var(--bg);color:var(--text);overflow-x:hidden;}
+body::before{
+  content:"";position:fixed;top:0;left:0;width:100%;height:100%;
+  background-image:linear-gradient(0deg,transparent 24%,rgba(255,255,255,.05) 25%,rgba(255,255,255,.05) 26%,transparent 27%,transparent 74%,rgba(255,255,255,.05) 75%,rgba(255,255,255,.05) 76%,transparent 77%,transparent),
+  linear-gradient(90deg,transparent 24%,rgba(255,255,255,.05) 25%,rgba(255,255,255,.05) 26%,transparent 27%,transparent 74%,rgba(255,255,255,.05) 75%,rgba(255,255,255,.05) 76%,transparent 77%,transparent);
+  background-size:60px 60px;animation:gridMove 60s linear infinite;z-index:-1;
+}
+@keyframes gridMove{from{background-position:0 0;}to{background-position:1000px 1000px;}}
+
+/* Header */
+header{
+  background:linear-gradient(90deg,var(--primary),#003366);
+  color:#fff;padding:15px 30px;
+  display:flex;justify-content:space-between;align-items:center;
+  box-shadow:0 3px 15px rgba(0,0,0,0.15);position:sticky;top:0;z-index:100;
+}
+header h1{font-size:20px;font-weight:600;}
+header a{
+  background:var(--accent);color:#fff;text-decoration:none;
+  padding:8px 16px;border-radius:25px;transition:.3s;
+}
+header a:hover{background:#ffa54c;}
+
+/* Hero */
+.hero{text-align:center;padding:80px 20px;background:linear-gradient(180deg,var(--primary),#002a5c);color:#fff;}
+.hero h2{font-size:36px;margin-bottom:10px;}
+.hero p{max-width:800px;margin:auto;font-size:17px;opacity:.9;}
+
+/* Projects Grid */
+.project-section{width:90%;max-width:1100px;margin:80px auto;}
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:25px;
+}
+.project-card{
+  background:#fff;
+  border-left:6px solid var(--primary);
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  padding:25px;
+  transition:.3s;
+  opacity:0;transform:translateY(30px);
+}
+.project-card.visible{opacity:1;transform:translateY(0);}
+.project-card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,0.15);}
+.project-card h3{color:var(--primary);margin-bottom:5px;}
+.project-card span{font-size:14px;color:#64748b;}
+.project-card p{margin-top:10px;color:#334155;font-size:15px;}
+.project-card button{
+  background:var(--accent);color:#fff;border:none;
+  padding:8px 16px;border-radius:25px;margin-top:12px;cursor:pointer;
+  transition:.3s;
+}
+.project-card button:hover{background:#ffa54c;}
+
+/* Modal */
+.modal{
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,0.6);display:none;align-items:center;justify-content:center;
+  z-index:999;
+}
+.modal-content{
+  background:#fff;padding:30px;border-radius:12px;
+  max-width:700px;width:90%;max-height:80vh;overflow-y:auto;
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+.modal-content h2{color:var(--primary);}
+.modal-content p{margin-top:10px;color:#334155;line-height:1.6;}
+.close-btn{float:right;font-size:20px;font-weight:bold;cursor:pointer;color:var(--accent);}
+
+/* Future Vision Section */
+.future{
+  width:90%;max-width:1000px;margin:100px auto;text-align:center;
+}
+.future h2{color:var(--primary);margin-bottom:15px;}
+.future p{color:#475569;max-width:750px;margin:auto;font-size:15px;line-height:1.6;}
+
+/* Footer */
+footer{
+  text-align:center;padding:25px;
+  background:linear-gradient(90deg,var(--primary),#003366);
+  color:#fff;margin-top:80px;font-size:14px;
+}
+
+@media(max-width:600px){
+  .hero h2{font-size:28px;}
+  header h1{font-size:18px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>My Projects</h1>
+  <a href="index.html">← Back to Portfolio</a>
+</header>
+
+<section class="hero">
+  <h2>Projects That Reflect My Learning & Passion</h2>
+  <p>Each project I’ve worked on represents a real-world problem solved with engineering logic, precision, and creativity — from design to estimation and execution.</p>
+</section>
+
+<section class="project-section">
+  <div class="project-grid">
+
+    <div class="project-card">
+      <h3>Structural Analysis of G+1 Residential Building</h3>
+      <span>Academic Project | 2023</span>
+      <p>Modeled and analyzed a two-storey RCC structure using STAAD Pro. Verified design with manual calculations and ensured compliance with IS 456:2000.</p>
+      <button onclick="openModal('proj1')">View Details</button>
+    </div>
+
+    <div class="project-card">
+      <h3>Estimation & Costing of Residential House</h3>
+      <span>Course Project | 2023</span>
+      <p>Prepared detailed BOQ, rate analysis, and cost sheet using Excel automation. Ensured accurate quantity take-offs and bill verification process.</p>
+      <button onclick="openModal('proj2')">View Details</button>
+    </div>
+
+    <div class="project-card">
+      <h3>Landslide Mitigation & Flood Management Design</h3>
+      <span>Final Year Major Project | 2025</span>
+      <p>Ongoing study on slope stabilization techniques and water channel optimization to prevent erosion and floods in hilly areas near Mahad.</p>
+      <button onclick="openModal('proj3')">View Details</button>
+    </div>
+
+    <div class="project-card">
+      <h3>Smart Construction Site Management System</h3>
+      <span>Personal Innovation | 2024</span>
+      <p>Designed a concept of integrating AI tools to automate daily site reporting, material tracking, and progress visualization for smart construction workflow.</p>
+      <button onclick="openModal('proj4')">View Details</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="future">
+  <h2>Future Vision</h2>
+  <p>My upcoming focus is on combining civil engineering design principles with modern technologies like AI, IoT, and sustainable materials to build smarter, more efficient, and environmentally responsible infrastructure.</p>
+</section>
+
+<footer>
+  © 2025 Yash Dhotre | Civil Engineering Student | Mahad, Maharashtra
+</footer>
+
+<!-- Modals -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalBody"></p>
+  </div>
+</div>
+
+<script>
+const modal=document.getElementById("modal");
+const title=document.getElementById("modalTitle");
+const body=document.getElementById("modalBody");
+
+const projectDetails={
+  proj1:`This project involved the design and analysis of a G+1 RCC residential building. The structure was modelled in STAAD Pro to evaluate bending moments, shear forces, and member deflections. Manual checks were performed using IS 456:2000 and IS 875:2015. Deliverables included structural drawings, reinforcement detailing, and load combination reports.`,
+  proj2:`Prepared a full Bill of Quantities (BOQ), rate analysis, and total cost estimation for a residential house using MS Excel. Implemented formulas for automated calculations and used rate databases to ensure accurate pricing. The project enhanced my skills in measurement sheets, quantity take-offs, and material planning.`,
+  proj3:`Currently leading a study on flood management and landslide mitigation in the Mahad region. The focus is on stabilizing slopes using retaining structures, geotextiles, and proper drainage planning. Integrating real data with STAAD Pro and GIS tools to propose a practical design for safety and sustainability.`,
+  proj4:`Conceptualized a digital system to improve site management efficiency. The model integrates AI tools for generating daily site reports, tracking materials, and scheduling tasks automatically. The goal is to minimize paperwork and increase transparency in construction operations.`
+};
+
+function openModal(key){
+  modal.style.display="flex";
+  title.textContent=document.querySelector(`[onclick="openModal('${key}')"]`).parentNode.querySelector('h3').textContent;
+  body.textContent=projectDetails[key];
+}
+function closeModal(){modal.style.display="none";}
+window.onclick=function(e){if(e.target==modal)closeModal();}
+
+// reveal animation for project cards
+const cards=document.querySelectorAll('.project-card');
+const obs=new IntersectionObserver((entries,observer)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+},{threshold:0.2});
+cards.forEach(c=>obs.observe(c));
+</script>
+
+</body>
+</html>
