@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://yashdhotreportfolio.civiondesign.site/sitemap.xml
+Sitemap: https://yashdhotre.site/sitemap.xml
 
