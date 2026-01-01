@@ -1,5 +1,5 @@
 // ===== CONFIG =====
-const PASSWORD_HASH = "9c56cc51b374c3ba189210d5b6d4bf577c0f0f8f9c3dfb91fbd4b2f5d0b7e8d1";
+const PASSWORD_HASH = "112f43f667cfdbb8a5f904aac3e03865be79e6312eaf82cdee8a1352f565576e";
 // This hash is for password:Dhotreyash
 // You can change later
 
