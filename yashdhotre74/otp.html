@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OTP Verification</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="vault.css">
+</head>
+<body class="auth-body">
+
+  <div class="auth-box">
+    <h2>OTP Verification</h2>
+    <p>OTP sent to <b>ya****74@gmail.com</b> and <b>+91 ******4710</b></p>
+
+    <input type="password" id="otp" placeholder="Enter OTP">
+    <button onclick="checkOTP()">Verify</button>
+
+    <p id="otpError" class="error-text"></p>
+  </div>
+
+  <script>
+    if (!sessionStorage.getItem("step1")) {
+      window.location.href = "/";
+    }
+
+    function checkOTP() {
+      const otp = document.getElementById("otp").value;
+      const error = document.getElementById("otpError");
+
+      if (otp === "vault@open74") {
+        sessionStorage.setItem("vault", "open");
+        window.location.href = "vault.html";
+      } else {
+        error.textContent = "Invalid OTP";
+      }
+    }
+  </script>
+
+</body>
+</html>
