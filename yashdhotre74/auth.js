@@ -1,6 +1,6 @@
 // ===== CONFIG =====
 const PASSWORD_HASH = "9c56cc51b374c3ba189210d5b6d4bf577c0f0f8f9c3dfb91fbd4b2f5d0b7e8d1";
-// This hash is for password: yash@secure74
+// This hash is for password:Dhotreyash
 // You can change later
 
 let attempts = 0;
