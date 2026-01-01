@@ -1,5 +1,5 @@
 // ===== CONFIG =====
-const PASSWORD_HASH = "112f43f667cfdbb8a5f904aac3e03865be79e6312eaf82cdee8a1352f565576e"; // keep your correct hash
+const PASSWORD_HASH = "PASTE_YOUR_HASH_HERE";
 
 let attempts = 0;
 
@@ -12,12 +12,12 @@ function checkPassword() {
   const input = inputEl.value.trim();
 
   if (!input) {
-    errorEl.textContent = "Authentication required.";
+    errorEl.innerHTML = "Authentication required.";
     return;
   }
 
   if (typeof CryptoJS === "undefined") {
-    errorEl.textContent = "Security module failed to load.";
+    errorEl.innerHTML = "Security module failed to load.";
     return;
   }
 
@@ -29,7 +29,6 @@ function checkPassword() {
   } else {
     attempts++;
 
-    // 👇 YOUR CUSTOM PROFESSIONAL MESSAGE
     errorEl.innerHTML = `
       Are you <b>Yash</b>?<br>
       If not, please obtain permission from Yash before proceeding.
