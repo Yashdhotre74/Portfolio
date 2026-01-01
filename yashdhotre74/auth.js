@@ -1,5 +1,5 @@
 // ===== CONFIG =====
-const PASSWORD_HASH = "7909b1ba715531cd94ceecf0e45d0def33b1e97dc7a9cd027fc1c34c70890df3";
+const PASSWORD_HASH = "a7505e93c1a8e86310a50433c664bed1e270c61593e879106bef978d95b809cf";
 
 let attempts = 0;
 
