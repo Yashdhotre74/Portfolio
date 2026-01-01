@@ -1,5 +1,5 @@
 // ===== CONFIG =====
-const PASSWORD_HASH = "PASTE_YOUR_HASH_HERE";
+const PASSWORD_HASH = "112f43f667cfdbb8a5f904aac3e03865be79e6312eaf82cdee8a1352f565576e";
 
 let attempts = 0;
 
