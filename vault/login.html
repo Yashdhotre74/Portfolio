@@ -107,14 +107,14 @@
     <div class="captcha-box">
       <label>Captcha: <strong>7X9Q2</strong></label>
       <input type="text" id="captchaInput" placeholder="Enter captcha here" />
-      <small style="color:#64748b;">(Fill the capthcha to proceed)</small>
+      <small style="color:#64748b;">(Optional — filling this will block login)</small>
     </div>
 
     <button onclick="checkLogin()">Login</button>
   </div>
 
   <script>
-    const CORRECT_PASSWORD = "Yasha"; // change this
+    const CORRECT_PASSWORD = "YashVaultKey123"; // change this
 
     function togglePassword() {
       const passField = document.getElementById("password");
@@ -133,14 +133,14 @@
       const captchaVal = document.getElementById("captchaInput").value.trim();
 
       if (captchaVal !== "") {
-        alert("Definatly, You are not yash.. please dont try to acces its private page");
+        alert("Wrong password! (Captcha entered)");
         return;
       }
 
       if (enteredPass === CORRECT_PASSWORD) {
         window.location.href = "otp.html";
       } else {
-        alert("Are you Yash?, If not, please obtain permission from Yash before proceeding"");
+        alert("Wrong password!");
       }
     }
   </script>
