@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login to Vault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; background:#0f172a; color:#e2e8f0; }
+    .box { background:#1e293b; padding:24px; border-radius:12px; width:320px; text-align:center; }
+    button { background:#22c55e; border:none; padding:12px 16px; border-radius:8px; color:#0f172a; font-weight:bold; cursor:pointer; width:100%; }
+    h1 { font-size:20px; margin-bottom:12px; }
+    p { font-size:14px; color:#94a3b8; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Secure Vault Login</h1>
+    <p>Click below to authenticate.</p>
+    <button id="loginBtn">Login</button>
+  </div>
+
+  <script>
+    (async () => {
+      const auth0 = await createAuth0Client({
+        domain: "yashdhotre.us.auth0.com",
+        client_id: "01DYOWc6YlcLkirdpHUxB0DCaqnWOHim"
+      });
+
+      document.getElementById("loginBtn").addEventListener("click", async () => {
+        await auth0.loginWithRedirect({
+          redirect_uri: window.location.origin + "/vault/otp.html"
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
