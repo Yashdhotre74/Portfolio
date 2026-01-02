@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>OTP Verification</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: Arial, sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; background:#0f172a; color:#e2e8f0; }
+    .box { background:#1e293b; padding:24px; border-radius:12px; width:340px; }
+    h1 { font-size:20px; margin-bottom:8px; text-align:center; }
+    p { font-size:14px; color:#94a3b8; text-align:center; }
+    input { width:100%; padding:12px; border-radius:8px; border:1px solid #334155; background:#0f172a; color:#e2e8f0; margin-top:12px; }
+    button { width:100%; margin-top:12px; background:#22c55e; border:none; padding:12px; border-radius:8px; color:#0f172a; font-weight:bold; cursor:pointer; }
+    .hint { font-size:12px; color:#64748b; text-align:center; margin-top:8px; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>OTP Verification</h1>
+    <p>We sent an OTP to your registered phone and email.</p>
+    <input type="password" id="otpPass" placeholder="Enter OTP" />
+    <button id="submitBtn">Verify</button>
+    <div class="hint">Note: OTP may take up to 30 seconds.</div>
+  </div>
+
+  <script>
+    const SECOND_PASSWORD = "112035"; // change this to your secret
+
+    document.getElementById("submitBtn").addEventListener("click", () => {
+      const entered = document.getElementById("otpPass").value.trim();
+      if (entered === SECOND_PASSWORD) {
+        window.location.href = "vault.html";
+      } else {
+        alert("Invalid OTP. Please try again.");
+      }
+    });
+  </script>
+</body>
+</html>
