@@ -46,37 +46,7 @@
   <div class="box">
     <h1>Secure Vault Login</h1>
     <p>Click below to authenticate.</p>
-    <button id="loginBtn">Login</button>
+    <button onclick="window.location.href='https://yashdhotre.us.auth0.com/authorize?response_type=token&client_id=81DY0W6c6YLcLkirdpHUx8BDCaqnW0Him&redirect_uri=https://yashdhotre.site/vault/otp.html'">Login</button>
   </div>
-
-  <!-- Load Auth0 SDK -->
-  <script>
-    const sdkScript = document.createElement("script");
-    sdkScript.src = "https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js";
-    sdkScript.onload = async () => {
-      if (typeof createAuth0Client !== "function") {
-        alert("Auth0 SDK failed to load.");
-        return;
-      }
-
-      const auth0Client = await createAuth0Client({
-        domain: "yashdhotre.us.auth0.com",
-        client_id: "81DY0W6c6YLcLkirdpHUx8BDCaqnW0Him"
-      });
-
-      document.getElementById("loginBtn").addEventListener("click", async () => {
-        try {
-          await auth0Client.loginWithRedirect({
-            redirect_uri: "https://yashdhotre.site/vault/otp.html"
-          });
-        } catch (err) {
-          console.error("Login error:", err);
-          alert("Login failed: " + err.message);
-        }
-      });
-    };
-
-    document.head.appendChild(sdkScript);
-  </script>
 </body>
 </html>
