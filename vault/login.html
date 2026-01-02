@@ -50,12 +50,12 @@
   </div>
 
   <!-- Load Auth0 SDK -->
-  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
-
   <script>
-    window.addEventListener("load", async () => {
+    const sdkScript = document.createElement("script");
+    sdkScript.src = "https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js";
+    sdkScript.onload = async () => {
       if (typeof createAuth0Client !== "function") {
-        alert("Auth0 SDK failed to load. Please check your internet or try again.");
+        alert("Auth0 SDK failed to load.");
         return;
       }
 
@@ -74,7 +74,9 @@
           alert("Login failed: " + err.message);
         }
       });
-    });
+    };
+
+    document.head.appendChild(sdkScript);
   </script>
 </body>
 </html>
