@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Login to Vault</title>
+  <title>Vault Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #0f172a;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
       color: #e2e8f0;
       display: flex;
       align-items: center;
@@ -16,37 +16,133 @@
       margin: 0;
     }
     .box {
-      background-color: #1e293b;
-      padding: 24px;
-      border-radius: 12px;
+      background: rgba(30, 41, 59, 0.95);
+      padding: 32px;
+      border-radius: 16px;
+      width: 360px;
       text-align: center;
-      width: 300px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+    h1 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      color: #93c5fd;
+    }
+    p {
+      font-size: 14px;
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+    .input-group {
+      position: relative;
+      margin-bottom: 16px;
+    }
+    input[type="password"], input[type="text"] {
+      width: 100%;
+      padding: 12px 40px 12px 12px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      background: #0f172a;
+      color: #e2e8f0;
+      font-size: 14px;
+    }
+    .toggle {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #93c5fd;
+      font-size: 12px;
     }
     button {
-      background-color: #22c55e;
+      background: #22c55e;
       border: none;
-      padding: 12px 16px;
+      padding: 12px;
       border-radius: 8px;
       color: #0f172a;
       font-weight: bold;
       cursor: pointer;
       width: 100%;
+      margin-top: 12px;
+      transition: background 0.3s;
     }
-    h1 {
-      font-size: 20px;
-      margin-bottom: 12px;
+    button:hover {
+      background: #16a34a;
     }
-    p {
-      font-size: 14px;
-      color: #94a3b8;
+    .captcha-box {
+      background: #111827;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 20px;
+      text-align: left;
+    }
+    .captcha-box label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 13px;
+      color: #cbd5e1;
+    }
+    .captcha-box input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #334155;
+      background: #0f172a;
+      color: #e2e8f0;
     }
   </style>
 </head>
 <body>
   <div class="box">
     <h1>Secure Vault Login</h1>
-    <p>Click below to authenticate.</p>
-    <button onclick="window.location.href='https://yashdhotre.us.auth0.com/authorize?response_type=code&client_id=81DY0W6c6YLcLkirdpHUx8BDCaqnW0Him&redirect_uri=https://yashdhotre.site/vault/otp.html&scope=openid%20profile%20email'">Login</button>
+    <p>Enter your password to continue</p>
+
+    <div class="input-group">
+      <input type="password" id="password" placeholder="Password" />
+      <span class="toggle" onclick="togglePassword()">Show</span>
+    </div>
+
+    <div class="captcha-box">
+      <label>Captcha: <strong>7X9Q2</strong></label>
+      <input type="text" id="captchaInput" placeholder="Enter captcha here" />
+      <small style="color:#64748b;">(Optional — filling this will block login)</small>
+    </div>
+
+    <button onclick="checkLogin()">Login</button>
   </div>
+
+  <script>
+    const CORRECT_PASSWORD = "YashVaultKey123"; // change this
+
+    function togglePassword() {
+      const passField = document.getElementById("password");
+      const toggle = document.querySelector(".toggle");
+      if (passField.type === "password") {
+        passField.type = "text";
+        toggle.textContent = "Hide";
+      } else {
+        passField.type = "password";
+        toggle.textContent = "Show";
+      }
+    }
+
+    function checkLogin() {
+      const enteredPass = document.getElementById("password").value.trim();
+      const captchaVal = document.getElementById("captchaInput").value.trim();
+
+      if (captchaVal !== "") {
+        alert("Wrong password! (Captcha entered)");
+        return;
+      }
+
+      if (enteredPass === CORRECT_PASSWORD) {
+        window.location.href = "otp.html";
+      } else {
+        alert("Wrong password!");
+      }
+    }
+  </script>
 </body>
 </html>
