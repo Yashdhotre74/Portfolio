@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Document Vault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="vault.css" />
+  <style>
+    body { font-family: Arial, sans-serif; background:#0f172a; color:#e2e8f0; margin:0; }
+    header { padding:16px 24px; background:#111827; display:flex; align-items:center; gap:12px; }
+    input[type="text"] { flex:1; padding:10px; border-radius:8px; border:1px solid #334155; background:#0f172a; color:#e2e8f0; }
+    .container { padding:24px; }
+    .section { margin-bottom:24px; }
+    .section h2 { font-size:18px; margin-bottom:12px; color:#93c5fd; }
+    ul { list-style:none; padding:0; margin:0; }
+    li { background:#1f2937; margin-bottom:8px; padding:12px; border-radius:8px; display:flex; justify-content:space-between; align-items:center; }
+    a { color:#93c5fd; text-decoration:none; }
+    .badge { background:#334155; color:#e2e8f0; padding:4px 8px; border-radius:6px; font-size:12px; }
+    .hidden { display:none; }
+  </style>
+</head>
+<body>
+  <header>
+    <input type="text" id="searchBox" placeholder="Search documents..." onkeyup="searchDocs()" />
+    <span class="badge" id="countBadge">0 items</span>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h2>Important documents</h2>
+      <ul id="importantList">
+        <li><span>Passport Scan.pdf</span><a href="https://drive.google.com/file/d/FILE_ID/view?usp=sharing" target="_blank">Download</a></li>
+        <li><span>Bank Statement Jan.xlsx</span><a href="https://drive.google.com/file/d/FILE_ID/view?usp=sharing" target="_blank">Download</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>College documents</h2>
+      <ul id="collegeList">
+        <li><span>Semester 5 Notes.pdf</span><a href="https://drive.google.com/file/d/FILE_ID/view?usp=sharing" target="_blank">Download</a></li>
+        <li><span>Project Report.docx</span><a href="https://drive.google.com/file/d/FILE_ID/view?usp=sharing" target="_blank">Download</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Photos</h2>
+      <ul id="photosList">
+        <li><span>Family Trip 2024.zip</span><a href="https://drive.google.com/file/d/FILE_ID/view?usp=sharing" target="_blank">Download</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function searchDocs() {
+      const q = document.getElementById("searchBox").value.toLowerCase();
+      const lists = document.querySelectorAll("ul");
+      let visibleCount = 0;
+
+      lists.forEach(list => {
+        const items = list.querySelectorAll("li");
+        items.forEach(li => {
+          const name = li.querySelector("span").textContent.toLowerCase();
+          const match = name.includes(q);
+          li.style.display = match ? "" : "none";
+          if (match) visibleCount++;
+        });
+      });
+
+      document.getElementById("countBadge").textContent = `${visibleCount} items`;
+    }
+
+    // Initialize count
+    window.onload = () => {
+      const total = document.querySelectorAll("li").length;
+      document.getElementById("countBadge").textContent = `${total} items`;
+    };
+  </script>
+</body>
+</html>
