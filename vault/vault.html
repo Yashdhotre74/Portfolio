@@ -4,76 +4,186 @@
   <meta charset="UTF-8" />
   <title>My Document Vault</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="vault.css" />
   <style>
-    body { font-family: Arial, sans-serif; background:#0f172a; color:#e2e8f0; margin:0; }
-    header { padding:16px 24px; background:#111827; display:flex; align-items:center; gap:12px; }
-    input[type="text"] { flex:1; padding:10px; border-radius:8px; border:1px solid #334155; background:#0f172a; color:#e2e8f0; }
-    .container { padding:24px; }
-    .section { margin-bottom:24px; }
-    .section h2 { font-size:18px; margin-bottom:12px; color:#93c5fd; }
-    ul { list-style:none; padding:0; margin:0; }
-    li { background:#1f2937; margin-bottom:8px; padding:12px; border-radius:8px; display:flex; justify-content:space-between; align-items:center; }
-    a { color:#93c5fd; text-decoration:none; }
-    .badge { background:#334155; color:#e2e8f0; padding:4px 8px; border-radius:6px; font-size:12px; }
-    .hidden { display:none; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      margin: 0;
+      display: flex;
+      height: 100vh;
+    }
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #1e293b;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar h2 {
+      color: #93c5fd;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    .sidebar a {
+      color: #e2e8f0;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      display: block;
+      transition: background 0.3s;
+    }
+    .sidebar a:hover, .sidebar a.active {
+      background: #334155;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: #111827;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    header input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+    header button {
+      background: #22c55e;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      color: #0f172a;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* File grid */
+    .content {
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .section {
+      margin-bottom: 24px;
+    }
+    .section h3 {
+      color: #93c5fd;
+      margin-bottom: 12px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+    }
+    .file {
+      background: #1f2937;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .file span {
+      display: block;
+      margin-top: 8px;
+      font-size: 14px;
+      color: #cbd5e1;
+    }
+    .file a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    /* Storage bar */
+    .storage {
+      background: #111827;
+      padding: 12px 20px;
+      font-size: 13px;
+      color: #cbd5e1;
+    }
+    .bar {
+      height: 8px;
+      background: #334155;
+      border-radius: 4px;
+      margin-top: 6px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: #22c55e;
+      width: 30%; /* Example usage */
+    }
   </style>
 </head>
 <body>
-  <header>
-    <input type="text" id="searchBox" placeholder="Search documents..." onkeyup="searchDocs()" />
-    <span class="badge" id="countBadge">0 items</span>
-  </header>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Vault</h2>
+    <a href="#" class="active">Important</a>
+    <a href="#">Work</a>
+    <a href="#">College</a>
+    <a href="#">Photos</a>
+  </div>
 
-  <div class="container">
-    <div class="section">
-      <h2>Important documents</h2>
-      <ul id="importantList">
-        <li><span>Passport Scan.pdf</span><a href="https://drive.google.com/file/d/FILE_ID/view?usp=sharing" target="_blank">Download</a></li>
-        <li><span>Bank Statement Jan.xlsx</span><a href="https://drive.google.com/file/d/FILE_ID/view?usp=sharing" target="_blank">Download</a></li>
-      </ul>
+  <!-- Main content -->
+  <div class="main">
+    <!-- Header -->
+    <header>
+      <input type="text" id="searchBox" placeholder="Search documents..." onkeyup="searchDocs()" />
+      <button onclick="window.open('https://drive.google.com', '_blank')">Upload</button>
+    </header>
+
+    <!-- Content -->
+    <div class="content">
+      <div class="section">
+        <h3>Today</h3>
+        <div class="grid" id="fileGrid">
+          <div class="file">
+            <img src="https://via.placeholder.com/100x100?text=PDF" alt="PDF">
+            <span>Tax Report.pdf</span>
+            <a href="#">Download</a>
+          </div>
+          <div class="file">
+            <img src="https://via.placeholder.com/100x100?text=IMG" alt="Image">
+            <span>Vacation.jpg</span>
+            <a href="#">View</a>
+          </div>
+          <div class="file">
+            <img src="https://via.placeholder.com/100x100?text=XLS" alt="Excel">
+            <span>Budget.xlsx</span>
+            <a href="#">Download</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="section">
-      <h2>College documents</h2>
-      <ul id="collegeList">
-        <li><span>Semester 5 Notes.pdf</span><a href="https://drive.google.com/file/d/FILE_ID/view?usp=sharing" target="_blank">Download</a></li>
-        <li><span>Project Report.docx</span><a href="https://drive.google.com/file/d/FILE_ID/view?usp=sharing" target="_blank">Download</a></li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Photos</h2>
-      <ul id="photosList">
-        <li><span>Family Trip 2024.zip</span><a href="https://drive.google.com/file/d/FILE_ID/view?usp=sharing" target="_blank">Download</a></li>
-      </ul>
+    <!-- Storage -->
+    <div class="storage">
+      4.5 GB of 15 GB used
+      <div class="bar"><div class="bar-fill"></div></div>
     </div>
   </div>
 
   <script>
     function searchDocs() {
       const q = document.getElementById("searchBox").value.toLowerCase();
-      const lists = document.querySelectorAll("ul");
-      let visibleCount = 0;
-
-      lists.forEach(list => {
-        const items = list.querySelectorAll("li");
-        items.forEach(li => {
-          const name = li.querySelector("span").textContent.toLowerCase();
-          const match = name.includes(q);
-          li.style.display = match ? "" : "none";
-          if (match) visibleCount++;
-        });
+      const items = document.querySelectorAll(".file span");
+      items.forEach(span => {
+        const parent = span.parentElement;
+        parent.style.display = span.textContent.toLowerCase().includes(q) ? "" : "none";
       });
-
-      document.getElementById("countBadge").textContent = `${visibleCount} items`;
     }
-
-    // Initialize count
-    window.onload = () => {
-      const total = document.querySelectorAll("li").length;
-      document.getElementById("countBadge").textContent = `${total} items`;
-    };
   </script>
 </body>
 </html>
