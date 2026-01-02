@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>Login to Vault</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -50,28 +49,31 @@
     <button id="loginBtn">Login</button>
   </div>
 
+  <!-- Load Auth0 SDK -->
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js" onload="initAuth0()"></script>
+
   <script>
     let auth0Client;
 
-    async function initAuth0() {
-      auth0Client = await createAuth0Client({
+    function initAuth0() {
+      createAuth0Client({
         domain: "yashdhotre.us.auth0.com",
         client_id: "81DY0W6c6YLcLkirdpHUx8BDCaqnW0Him"
-      });
+      }).then(auth0 => {
+        auth0Client = auth0;
 
-      document.getElementById("loginBtn").addEventListener("click", async () => {
-        try {
-          await auth0Client.loginWithRedirect({
-            redirect_uri: "https://yashdhotre.site/vault/otp.html"
-          });
-        } catch (err) {
-          console.error("Login error:", err);
-          alert("Login failed: " + err.message);
-        }
+        document.getElementById("loginBtn").addEventListener("click", async () => {
+          try {
+            await auth0Client.loginWithRedirect({
+              redirect_uri: "https://yashdhotre.site/vault/otp.html"
+            });
+          } catch (err) {
+            console.error("Login error:", err);
+            alert("Login failed: " + err.message);
+          }
+        });
       });
     }
-
-    window.onload = initAuth0;
   </script>
 </body>
 </html>
