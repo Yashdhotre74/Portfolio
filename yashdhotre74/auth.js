@@ -42,3 +42,16 @@ function checkPassword() {
     }
   }
 }
+
+function togglePassword() {
+  const input = document.getElementById("password");
+  if (!input) return;
+
+  input.type = input.type === "password" ? "text" : "password";
+}
+
+function handleEnter(event) {
+  if (event.key === "Enter") {
+    checkPassword();
+  }
+}
