@@ -114,3 +114,29 @@ body.auth-body {
     transform: translateY(0);
   }
 }
+
+/* ===== PASSWORD FIELD WRAPPER ===== */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 42px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #c7d2fe;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.toggle-password:hover {
+  color: #ffffff;
+}
+
