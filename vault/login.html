@@ -21,18 +21,24 @@
   </div>
 
   <script>
-    (async () => {
-      const auth0 = await createAuth0Client({
+    let auth0Client; // declare globally
+
+    async function initAuth0() {
+      auth0Client = await createAuth0Client({
         domain: "yashdhotre.us.auth0.com",
         client_id: "01DYOWc6YlcLkirdpHUxB0DCaqnWOHim"
       });
 
+      // attach event after client is ready
       document.getElementById("loginBtn").addEventListener("click", async () => {
-        await auth0.loginWithRedirect({
+        await auth0Client.loginWithRedirect({
           redirect_uri: window.location.origin + "/vault/otp.html"
         });
       });
-    })();
+    }
+
+    // run on page load
+    window.onload = initAuth0;
   </script>
 </body>
 </html>
