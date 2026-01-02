@@ -107,7 +107,7 @@
     <div class="captcha-box">
       <label>Captcha: <strong>7X9Q2</strong></label>
       <input type="text" id="captchaInput" placeholder="Enter captcha here" />
-      <small style="color:#64748b;">(Fill Captcha code to proceed)</small>
+      <small style="color:#64748b;">(Fill the capthcha to proceed)</small>
     </div>
 
     <button onclick="checkLogin()">Login</button>
@@ -133,15 +133,14 @@
       const captchaVal = document.getElementById("captchaInput").value.trim();
 
       if (captchaVal !== "") {
-        alert("Definatly You are not Yash ... please dot try to acces its private page");
+        alert("Definatly, You are not yash.. please dont try to acces its private page");
         return;
       }
 
       if (enteredPass === CORRECT_PASSWORD) {
         window.location.href = "otp.html";
       } else {
-        alert("Are you Yash?
-If not, please obtain permission from Yash before proceeding.");
+        alert("Are you Yash?, If not, please obtain permission from Yash before proceeding"");
       }
     }
   </script>
