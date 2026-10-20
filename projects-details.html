@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Site Experience | Yash Dhotre</title>
+<title>Projects | Yash Dhotre</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -41,7 +41,7 @@ header a:hover{background:#ffa54c;}
 .hero h2{font-size:36px;margin-bottom:10px;}
 .hero p{max-width:800px;margin:auto;font-size:17px;opacity:.9;}
 
-/* Experience Grid */
+/* Projects Grid */
 .project-section{width:90%;max-width:1100px;margin:80px auto;}
 .project-grid{
   display:grid;
@@ -84,7 +84,7 @@ header a:hover{background:#ffa54c;}
 .modal-content p{margin-top:10px;color:#334155;line-height:1.6;}
 .close-btn{float:right;font-size:20px;font-weight:bold;cursor:pointer;color:var(--accent);}
 
-/* Professional Focus Section */
+/* Future Vision Section */
 .future{
   width:90%;max-width:1000px;margin:100px auto;text-align:center;
 }
@@ -107,56 +107,56 @@ footer{
 <body>
 
 <header>
-  <h1>Site Experience</h1>
+  <h1>My Projects</h1>
   <a href="index.html">← Back to Portfolio</a>
 </header>
 
 <section class="hero">
-  <h2>Professional Experience in Civil Engineering</h2>
-  <p>My experience includes site execution, RCC construction, quantity estimation, quality checks, and construction documentation across residential and commercial projects.</p>
+  <h2>Projects That Reflect My Learning & Passion</h2>
+  <p>Each project I’ve worked on represents a real-world problem solved with engineering logic, precision, and creativity — from design to estimation and execution.</p>
 </section>
 
 <section class="project-section">
   <div class="project-grid">
 
     <div class="project-card">
-      <h3>Site Engineer — Nexa Futurity LLP</h3>
-      <span>Nexa Prime Project | February 2026 – Present</span>
-      <p>Supporting day-to-day RCC construction execution on a residential and commercial building project, with a focus on site coordination, quantity calculations, quality checks, and records.</p>
-      <button onclick="openModal('exp1')">View Details</button>
+      <h3>Structural Analysis of G+1 Residential Building</h3>
+      <span>Academic Project | 2023</span>
+      <p>Modeled and analyzed a two-storey RCC structure using STAAD Pro. Verified design with manual calculations and ensured compliance with IS 456:2000.</p>
+      <button onclick="openModal('proj1')">View Details</button>
     </div>
 
     <div class="project-card">
-      <h3>Civil Engineering Intern — CKC Hub</h3>
-      <span>Mahad | June – August 2023</span>
-      <p>Gained practical exposure to construction activities on a G+10 commercial and residential building, including column and plinth-beam work.</p>
-      <button onclick="openModal('exp2')">View Details</button>
+      <h3>Estimation & Costing of Residential House</h3>
+      <span>Course Project | 2023</span>
+      <p>Prepared detailed BOQ, rate analysis, and cost sheet using Excel automation. Ensured accurate quantity take-offs and bill verification process.</p>
+      <button onclick="openModal('proj2')">View Details</button>
     </div>
 
     <div class="project-card">
-      <h3>Site Engineering Intern — Government School Project</h3>
-      <span>Mahad | June – August 2024</span>
-      <p>Developed practical understanding of site activities, construction coordination, and the day-to-day requirements of civil engineering work.</p>
-      <button onclick="openModal('exp3')">View Details</button>
+      <h3>Landslide Mitigation & Flood Management Design</h3>
+      <span>Final Year Major Project | 2025</span>
+      <p>Ongoing study on slope stabilization techniques and water channel optimization to prevent erosion and floods in hilly areas near Mahad.</p>
+      <button onclick="openModal('proj3')">View Details</button>
     </div>
 
     <div class="project-card">
-      <h3>Construction Documentation & Quantity Work</h3>
-      <span>Nexa Prime Project | Current Responsibilities</span>
-      <p>Preparing site documentation and quantity records to support construction monitoring, material tracking, and quality-control activities.</p>
-      <button onclick="openModal('exp4')">View Details</button>
+      <h3>Smart Construction Site Management System</h3>
+      <span>Personal Innovation | 2024</span>
+      <p>Designed a concept of integrating AI tools to automate daily site reporting, material tracking, and progress visualization for smart construction workflow.</p>
+      <button onclick="openModal('proj4')">View Details</button>
     </div>
 
   </div>
 </section>
 
 <section class="future">
-  <h2>Professional Focus</h2>
-  <p>I am focused on strengthening my skills in site execution, quantity surveying, estimation and billing, quality control, and project coordination while continuing to learn from practical construction work.</p>
+  <h2>Future Vision</h2>
+  <p>My upcoming focus is on combining civil engineering design principles with modern technologies like AI, IoT, and sustainable materials to build smarter, more efficient, and environmentally responsible infrastructure.</p>
 </section>
 
 <footer>
-  © 2026 Yash Dhotre | Graduate Civil Engineer | Mahad, Maharashtra
+  © 2025 Yash Dhotre | Civil Engineering Student | Mahad, Maharashtra
 </footer>
 
 <!-- Modals -->
@@ -174,10 +174,10 @@ const title=document.getElementById("modalTitle");
 const body=document.getElementById("modalBody");
 
 const projectDetails={
-  exp1:`Working as a Site Engineer at Nexa Futurity LLP on the Nexa Prime residential and commercial project. Responsibilities include supporting RCC site execution, checking reinforcement and shuttering before concrete pours, quantity and material calculations, coordinating with contractors, and maintaining daily progress and site records.`,
-  exp2:`Completed a Civil Engineering internship at CKC Hub in Mahad, a G+10 commercial and residential building. Gained practical exposure to site activities including column and plinth-beam work. This internship helped build an understanding of construction sequencing and site coordination.`,
-  exp3:`Completed a Site Engineering internship at a Government School Project in Mahad. This experience provided practical exposure to civil construction activities and the coordination required on a live project.`,
-  exp4:`Current documentation and quantity-related work includes preparing Daily Progress Reports (DPR), concrete quantity records, cube-testing records, site photographs, attendance records, and material records. These activities support site monitoring, traceability, quality control, and coordination.`
+  proj1:`This project involved the design and analysis of a G+1 RCC residential building. The structure was modelled in STAAD Pro to evaluate bending moments, shear forces, and member deflections. Manual checks were performed using IS 456:2000 and IS 875:2015. Deliverables included structural drawings, reinforcement detailing, and load combination reports.`,
+  proj2:`Prepared a full Bill of Quantities (BOQ), rate analysis, and total cost estimation for a residential house using MS Excel. Implemented formulas for automated calculations and used rate databases to ensure accurate pricing. The project enhanced my skills in measurement sheets, quantity take-offs, and material planning.`,
+  proj3:`Currently leading a study on flood management and landslide mitigation in the Mahad region. The focus is on stabilizing slopes using retaining structures, geotextiles, and proper drainage planning. Integrating real data with STAAD Pro and GIS tools to propose a practical design for safety and sustainability.`,
+  proj4:`Conceptualized a digital system to improve site management efficiency. The model integrates AI tools for generating daily site reports, tracking materials, and scheduling tasks automatically. The goal is to minimize paperwork and increase transparency in construction operations.`
 };
 
 function openModal(key){
