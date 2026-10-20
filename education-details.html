@@ -178,10 +178,22 @@ footer{
 }
 
 @media(max-width:768px){
+  header{padding:14px 16px;gap:12px;}
+  header h1{font-size:18px;}
+  header a{padding:8px 12px;font-size:13px;white-space:nowrap;}
+  .hero{padding:60px 18px;}
+  .hero h2{font-size:clamp(27px,7vw,36px);}
+  .hero p{font-size:15px;}
+  .timeline{width:100%;margin:55px auto;}
   .timeline::before{left:10px;}
-  .entry{width:100%;padding-left:40px;margin-bottom:40px;}
+  .entry{width:100%;left:0!important;padding:18px 12px 18px 36px;margin-bottom:18px;text-align:left!important;}
   .entry::before{left:0!important;right:auto;}
-  .entry-box{text-align:left;}
+  .entry-box{padding:22px;text-align:left;}
+  .college-section{width:calc(100% - 32px);padding:28px 20px;margin:60px auto;}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important;}
+  .entry{opacity:1;transform:none;}
 }
 </style>
 </head>
@@ -195,7 +207,7 @@ footer{
 
 <section class="hero">
   <h2>My Educational Journey</h2>
-  <p>From foundation-level learning to advanced design and analysis, my education has shaped both my technical expertise and practical mindset as a Civil Engineer.</p>
+  <p>My journey from a Diploma in Civil Engineering to completing my B.Tech helped me build a strong foundation in civil engineering, technical problem-solving, and practical construction work.</p>
 </section>
 
 <section class="timeline">
@@ -203,35 +215,35 @@ footer{
     <div class="entry-box">
       <h3>Diploma in Civil Engineering</h3>
       <span>2019 – 2022 | Government Polytechnic, Ratnagiri</span>
-      <p>Strengthened my fundamentals in construction materials, surveying, and RCC design. Participated in on-site training that enhanced my understanding of foundations and reinforcement detailing.</p>
+      <p>My diploma built my foundation in civil engineering, including surveying, construction materials, building construction, and basic estimation. It introduced me to the practical thinking and measurement accuracy needed on construction projects.</p>
     </div>
   </div>
 
   <div class="entry">
     <div class="entry-box">
       <h3>B.Tech in Civil Engineering</h3>
-      <span>2022 – 2025 | <a href="https://dbatu.ac.in" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:600;">Dr. Babasaheb Ambedkar Technological University (DBATU), Lonere</a></span>
-      <p>Specialized in structural analysis, RCC design, and project management. Developed proficiency in AutoCAD, STAAD Pro, and Excel for analysis, estimation, and BOQ automation. Final-year project focuses on flood management and slope stabilization.</p>
+      <span>2022 – 2026 | <a href="https://dbatu.ac.in" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;font-weight:600;">Dr. Babasaheb Ambedkar Technological University (DBATU), Lonere</a></span>
+      <p>Completed my B.Tech in Civil Engineering in 2026. My studies developed my understanding of structural analysis, RCC design, construction management, and civil engineering applications. I applied tools such as AutoCAD, STAAD.Pro, and Excel in academic and practical work, while exploring flood assessment and landslide susceptibility through research.</p>
     </div>
   </div>
 
   <div class="entry">
     <div class="entry-box">
       <h3>Academic Projects & Internships</h3>
-      <span>2023 – 2025</span>
-      <p>Completed site internship focused on RCC foundations and quality checks. Worked on “Structural Analysis of G+1 Residential Building” and “Estimation and Costing for Residential Construction.”</p>
+      <span>Academic and practical learning | 2023 – 2026</span>
+      <p>Alongside my coursework, I explored structural analysis, quantity estimation, and construction-related projects. My research interests include flood assessment using remote sensing and landslide susceptibility mapping. Site internships also helped me connect classroom concepts with construction activities, quality checks, and site coordination.</p>
     </div>
   </div>
 </section>
 
 <section class="college-section">
-  <h3>My College Section</h3>
-  <p>To explore my campus life, academic journey, achievements, and my works during my studies at DBATU — visit my college section.</p>
-  <a href="college-work.html">🎓 Dive Deep into College Section</a>
+  <h3>Explore My Academic Work</h3>
+  <p>Take a closer look at selected academic work, study materials, and projects from my civil engineering journey.</p>
+  <a href="college-work.html">🎓 Explore College Work</a>
 </section>
 
 <footer>
-  © 2025 Yash Dhotre | Civil Engineer | Mahad, Maharashtra
+  © 2026 Yash Dhotre | Graduate Civil Engineer | Mahad, Maharashtra
 </footer>
 
 <script>
